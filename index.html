@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Jewels</title>
+        <link rel="stylesheet" href="assets/css/style.css">
+        <!-- Latest compiled and minified CSS -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+
+    <!-- Optional theme -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> -->
+
+    <!-- Latest compiled and minified JavaScript -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    </head>
+
+    <body class="overrideBS">
+<section><h1>Crystals Collector Game</h1>
+    <details><summary>Open to get instructions for the game</summary>
+            <p>You will be given a random number at the start of the game.</p>
+            <p>There are four crystals below.  By clicking on a crystal, you will add a specific amount of points to your total score.</p>
+            <p>You win the game by matchign your total score to random number.  You lose the game if your total score is more than the random number.</p>
+            <p>The value of each crystal is hidden from you until you click on it.</p>
+            <p>Each time when the game starts, the game will change the values of each crystal.</p>
+    </details>
+
+    <label for="targetPoints">  Your target score is:</label>
+    <article id="targetPoints"> </article>
+    <!-- <label for="winLosses">Your current score is:</label> -->
+    <article id="winLosses">
+        Wins: <div id="wins"></div>
+        <br>
+        Losses: <div id="losses"></div>
+    </article>
+
+    <img class="gemsImage"src="assets/images/gem-map.jpg" width="500" height="126" alt="Gems"
+     usemap="#gemmap">
+     <map name="gemmap" class="gemClass">
+        <area shape="rect" coords="0,0,125,126" id="sapphire">
+        <area shape="rect" coords="125,0,250,126" id="ruby">
+        <area shape="rect" coords="250,0,375,126" id="amythest" >
+        <area shape="rect" coords="375,0,500,126" id="topaz" >
+     </map>
+     </article>
+     <br>
+     <hr>
+
+     <label id="totalScoreLabel" for="totalScore">Your total score is:</label>
+     <article id="totalScore">     </article>
+
+</section>
+
+<script type="text/javascript" src="assets/javascript/jewels.js"></script>
+    </body>
+</html>
