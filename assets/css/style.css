@@ -2,6 +2,7 @@ body, .overrideBS {
       font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
         background-image: url("http://www.jasspmllc.com/images/quote_form_background.jpeg");
         margin-left: 10px;
+        height: auto;
 }
 
 details {
