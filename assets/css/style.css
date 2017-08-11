@@ -67,6 +67,7 @@ img {
 #totalScoreLabel {
     margin-left: 24%;
     float: left;
+    font-size: 18px;
 }
 
 summary {
