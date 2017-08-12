@@ -19,7 +19,7 @@ $(document).ready(function() {
 
     // Calculate a random number between 19-120
     function generateRandomPoints() {
-        randomNumberValue = Math.floor((Math.random() * (121 - 19 +1)) +19);
+        randomNumberValue = Math.floor((Math.random() * (121 - 19)) +19);
         $("#targetPoints").html(randomNumberValue);
 
         return randomNumberValue;
@@ -28,7 +28,7 @@ $(document).ready(function() {
 
         // Calculate a random number between 1-12 for each gem
     function generateRandomJewelPoints() {
-        var randomJewelValue = Math.floor((Math.random() * (12 - 0 +1)) +1);
+        var randomJewelValue = Math.floor((Math.random() * (12 - 1)) +1);
 
         return randomJewelValue;
     }
@@ -39,6 +39,28 @@ $(document).ready(function() {
         rubyPoints = generateRandomJewelPoints();
         amythestPoints = generateRandomJewelPoints();
         topazPoints = generateRandomJewelPoints();
+
+        // if any of the values are the same, generate a new randomJewelValue
+        switch(true) {
+            case sapphirePoints === rubyPoints:
+            sapphirePoints = generateRandomJewelPoints();
+            break;
+            case sapphirePoints === amythestPoints:
+            sapphirePoints = generateRandomJewelPoints();
+            break;
+            case sapphirePoints === topazPoints:
+            sapphirePoints = generateRandomJewelPoints();
+            break;
+            case rubyPoints === amythestPoints:
+            rubyPoints = generateRandomJewelPoints();
+            break;
+            case rubyPoints === topazPoints:
+            rubyPoints = generateRandomJewelPoints();
+            break;
+            case amythestPoints === topazPoints:
+            amythestPoints = generateRandomJewelPoints();
+            break;
+        }
 
         console.log(sapphirePoints,rubyPoints,amythestPoints,topazPoints);
     }
